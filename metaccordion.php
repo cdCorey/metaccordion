@@ -23,7 +23,6 @@ License: Copyright 2015 Chatman Design
 // Works great down to 1280px wide
 //
 // TODO: Add media queries to account for smaller sizes (and mobile top bar height)
-// TODO: Add script to manage which boxes are open for accordion effect
 //
 // Consider enhancements:
 // – Add "go to" quick nav list of all the normal meta-boxes (each has unique ID, so jumping to each is easy)
@@ -38,6 +37,7 @@ function metaccordion_enqueue($hook) {
 
 	if ( in_array($hook, $show_on_pages) ) {
 		wp_enqueue_style( 'metaccordion-css', plugin_dir_url( __FILE__ ) . 'metaccordion.css' );
+		wp_enqueue_script( 'metaccordion-js', plugin_dir_url( __FILE__ ) . 'metaccordion.js' );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'metaccordion_enqueue' );
