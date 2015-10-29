@@ -1,5 +1,15 @@
 # https://git-scm.com/docs/gitignore
 # https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
+
+# Third-Party Components
 /bower_components/
 /node_modules/
+
+# Auto-generated Files
+.DS_Store
+.sass-cache
+
+# Emacs Autosaves and Backups
+*~
+\#*\#
