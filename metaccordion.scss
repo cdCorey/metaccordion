@@ -1,9 +1,11 @@
+// Variables
 $wp-admin-padding: 20px;
 $wp-admin-meta-width: 280px;
 $wp-admin-meta-allowance: $wp-admin-padding + $wp-admin-meta-width;
 $wp-admin-meta-bg: #f5f5f5;
 $wp-admin-meta-border-color: #e5e5e5;
 
+// Overall layout
 .wrap {
 	padding-right: $wp-admin-meta-allowance;
 }
@@ -12,6 +14,15 @@ $wp-admin-meta-border-color: #e5e5e5;
 	margin-right: 0;
 }
 
+// Prevent sidebar from blocking screen-meta
+#screen-meta {
+	z-index: 10;
+}
+#screen-meta-links {
+	padding-right: $wp-admin-meta-allowance;
+}
+
+// Sidebar boxes
 #post-body.columns-2 #postbox-container-1 {
 	position: fixed;
 	right: 0;
@@ -44,10 +55,22 @@ $wp-admin-meta-border-color: #e5e5e5;
 	} // .postbox
 } // #post-body.columns-2 #postbox-container-1
 
-// Prevent sidebar from blocking screen-meta
-#screen-meta {
-	z-index: 10;
-}
-#screen-meta-links {
-	padding-right: $wp-admin-meta-allowance;
-}
+// Sidebar box groups
+//#post-body.columns-2 #postbox-container-1 {
+//	.postbox.postbox-group {
+//		> .inside {
+//			padding: 0;
+//		}
+//		.postbox {
+//			border-width: 0 0 1px 0 !important;
+//
+//			.handlediv {
+//				display: none;
+//			}
+//			.hndle {
+//				font-size: 90% !important;
+//				border-bottom: 0;
+//			}
+//		} // .postbox
+//	} // .postbox.postbox-group
+//} // #post-body.columns-2 #postbox-container-1
