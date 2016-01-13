@@ -5,7 +5,6 @@ Description: Combine all post editor sidebar meta-boxes into one accordion sideb
 Version: 0.1
 Author: Chatman Design
 Author URI: http://chatmandesign.com
-License: Copyright 2015 Chatman Design
 */
 /**
  * Metaccordion
@@ -15,7 +14,6 @@ License: Copyright 2015 Chatman Design
  * @since     0.1
  * @author    Chatman Design / Corey Caswick
  * @link      http://chatmandesign.com
- * @copyright Copyright 2015 Chatman Design
  *
  * @wordpress-plugin
  */
@@ -31,7 +29,7 @@ License: Copyright 2015 Chatman Design
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) die;
 
-// Enqueue custom CSS
+// Enqueue custom CSS & JS
 function metaccordion_enqueue($hook) {
 	$show_on_pages = array('post.php', 'post-new.php', 'comment.php');
 

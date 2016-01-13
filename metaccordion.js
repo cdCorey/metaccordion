@@ -5,16 +5,8 @@
 
 		$boxes.addClass('closed');
 		$boxes.on('click', '.hndle', function(){
-//			if ( $(this).parent().hasClass('closed') ) {
-
 			var parent = $(this).parent()[0];
 			$boxes.not(parent).addClass('closed');
-//				$(this).parent().removeClass('closed');
-//			}
-//			else {
-//				console.log('Not closed!');
-//				$(this).parent().addClass('closed');
-//			}
 		});
 	});
 })(jQuery);
